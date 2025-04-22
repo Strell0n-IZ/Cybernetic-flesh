@@ -52,15 +52,8 @@ namespace UFPPC
         SerializedProperty groundBoxSize;
         SerializedProperty groundLayerMask;
 
-        Animator myAnimator;
-
         bool mainAttributesGroup = true, crouchSystemGroup = false, keybindsGroup = false, staminaSystemGroup = false, simpleCameraSystemGroup = true, otherSettingsGroup = true;
         #endregion
-
-        private void Start ()
-          { 
-            myAnimator = GetComponent<Animator>();
-          }
 
         private void OnEnable()
         {
@@ -183,7 +176,6 @@ namespace UFPPC
                 {
                     EditorGUILayout.PropertyField(slowWalkButton);
 
-                    myAnimator.SetBool("Walking",true);
                 }
             }
             EditorGUILayout.EndFoldoutHeaderGroup();
